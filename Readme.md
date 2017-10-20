@@ -1,8 +1,8 @@
-# Run ASP.NET Core Application with Nginx on Docker Compose
+# Docker Compose Kullanım Örneği (.NET Core ve Nginx)
 ***
 ![logo](https://raw.githubusercontent.com/selcukusta/docker-compose-netcore-app/master/banner.png)
 ***
-Expose and mappings port can be changed on:
-- dotnetcore-app/Dockerfile
-- nginx/nginx.conf
+Dışarı port açma ve port eşleştirme işlemleri için aşağıdaki dosyaların düzenlenmesi gerekmektedir.
+- sample-app/Dockerfile
+- nginx/sample-app.conf
 - docker-compose.yml
