@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  sampleapp:
+    build:
+      context: ./sample-app
+      dockerfile: Dockerfile
+    ports:
+      - "1905:1905"
+    expose:
+      - "1905"
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    expose:
+      - "1923"
+    ports:
+      - "1923:1923"
+    depends_on:
+      - sampleapp
+    links:
+      - sampleapp:sampleapp
